@@ -5,11 +5,14 @@ from .models import Blog
 from .form import BlogPost
 
 def home(request):
-    blogs = Blog.objects.all().order_by('-id')
+    blogs = Blog.objects.all().order_by('-id') #식빵
+    #블로그의 모든 글을 대상으로
     blog_list = Blog.objects.all().order_by('-id')
-    paginator = Paginator(blog_list, 3)
+    #블로그 객체 3개를 한 페이지로 자르기
+    paginator = Paginator(blog_list, 3) #어떤걸 몇개씩 기준으로
+    #request된 페이지를 얻은 뒤 출력해준다
     page = request.GET.get('page')
-    posts = paginator.get_page(page)
+    posts = paginator.get_page(page) #식빵 조각들
     return render(request, 'home.html', {'blogs':blogs, 'posts':posts})
 
 def detail(request, blog_id):

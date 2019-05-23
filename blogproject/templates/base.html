@@ -10,11 +10,17 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+            <style>
+            #bird{ font-size: 40px;}
+            #bird2{ font-size: 23px;}
+            #bird3{ font-size: 20px;}
+            #bird4{color: white}</style>
     </head>
-    
+
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-dark  navbar-expand-lg bg-dark">
+          <i class="fal fa-soup" class="navbar-brand" href="{% url 'home' %}"></i>
+          <a id="bird" class="navbar-brand" href="{% url 'home' %}">Lamen world</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -22,32 +28,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                  <a id="bird2" class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{% url 'newblog' %}">글쓰기</a>
+                  <a id="bird2" class="nav-link" href="{% url 'newblog' %}">글쓰기</a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                        <a id="bird2" class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
                       </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <a id="bird2" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Log-in
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{%url 'login' %}">Log-in</a>
-                    <a class="dropdown-item" href="{%url 'logout' %}">Log-out</a>
+                    <a id="bird3" class="dropdown-item" href="{%url 'login' %}">Log-in</a>
+                    <a id="bird3" class="dropdown-item" href="{%url 'logout' %}">Log-out</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{%url 'signup' %}">Sign-up</a>
+                    <a id="bird3" class="dropdown-item" href="{%url 'signup' %}">Sign-up</a>
                   </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
               </ul>
               <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button id="bird4" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
             </div>
           </nav><br>
